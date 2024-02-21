@@ -1,6 +1,7 @@
 class PlacesController < ApplicationController
   def index
-    @place = Place.all
+    @places = Place.all
+  
     # render/show entire list of places on the index page
   end
   
