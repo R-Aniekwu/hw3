@@ -2,8 +2,8 @@
 
 <p><a href="/places">Back to List of Places</a></p>
 
-<form action="/places/<%= @place["id"] %>" method="post">
+<form action="/places/<%= @place["id"] %>" method="GET">
   <input type="hidden" name="_method">
+  <button name = "Edit" formaction = "/places/<%= @place["id"] %>/edit"></button>
 </form>
 
-<button>Edit</button>
