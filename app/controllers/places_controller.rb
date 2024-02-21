@@ -15,16 +15,27 @@ class PlacesController < ApplicationController
     # render contacts/new view with new Contact form
   end
 
+  def edit
+    # find a Company
+    @place = Place.find_by({ "id" => params["id"] })
+    @place.save
+    redirect_to "/places/#{@place["id"]}"
+  end
+
+  def update
+    # find a Company
+    @place = Place.find_by({ "id" => params["id"] })
+    @place.save
+    redirect_to "/places/#{@place["id"]}"
+  end
+
   def create
-    # start with a new Contact
     @place = Place.new
 
     # assign name to a new place (user-entered)
     @place["name"] = params["name"]
   
-    # assign relationship between place and journal entry
     
-    # save Contact row
     @place.save
 
     # redirect user if query not found
