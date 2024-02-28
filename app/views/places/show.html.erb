@@ -1,9 +1,6 @@
 <h1><%= @place["name"] %></h1>
 
+ 
+
 <p><a href="/places">Back to List of Places</a></p>
-
-<form action="/places/<%= @place["id"] %>" method="GET">
-  <input type="hidden" name="_method">
-  <button name = "Edit" formaction = "/places/<%= @place["id"] %>/edit"></button>
-</form>
-
+<p><a href="/entries/new">New Post</a></p>
